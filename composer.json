@@ -24,5 +24,10 @@
             "name": "NOFFABEL",
             "email": "noffabel12@gmail.com"
         }
-    ]
+    ],
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    }
 }
