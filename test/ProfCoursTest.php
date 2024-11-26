@@ -441,6 +441,14 @@ class ProfCoursTest extends TestCase
          * s’inspirer de test de la suppression du prof avec idProf= 8 pour tester la modification du cours dans ayant comme idCours = 7.
          *
          */
+        $val = Cours::deleteOne($conn, $idCours);
+        $this->assertTrue($val,  "Cours num $idCours supprimé avec succès\n");
+        $record_cours_a = Cours::printAll($conn);
+        print "########## - LISTE DES COURS APRES SUPPRESSION - Vérifiez le cours num $idCours ########## \n";
+        foreach ( $record_cours_a as $record_cours ) {
+            print $record_cours;
+        }
+        print "################################################################\n\n";
     }
 
 
@@ -467,7 +475,14 @@ class ProfCoursTest extends TestCase
          * s’inspirer de test de la suppression du premier prof pour tester la suppression du premier cours.
          *
          */
-
+        $val = Cours::deleteOne($conn);
+        $this->assertTrue($val,  "Premier Cours supprimé avec SUCCES\n");
+        $record_cours_a = Cours::printAll($conn);
+        print "########## - LISTE DES COURS APRES SUPPRESSION - Vérifier avec celui juste avant (1e supprimé) ########## \n";
+        foreach ( $record_cours_a as $record_cours ) {
+            print $record_cours;
+        }
+        print "################################################################\n\n";
 
     }
 
