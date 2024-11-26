@@ -100,6 +100,9 @@ class ProfCoursTest extends TestCase
              *
              */
 
+            new Cours("IOT", "10", 1),
+            new Cours("IA", "12", 3),
+            new Cours("EDL", "5", 6),
         ];
 
     }
